@@ -12,7 +12,7 @@ import {
   FaChevronCircleUp,
 } from "react-icons/fa";
 import { BiSupport } from "react-icons/bi";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Footer() {
   return (
@@ -84,30 +84,30 @@ function Footer() {
               <h4 className="text-info fs-5 text-decoration-underline">
                 Popular Packages
               </h4>
-              <NavLink
-                to="/regular"
+              <Link
+                to="/normal"
                 className="m-0 px-1 btn-outline-light rounded-pill text-decoration-none"
               >
                 Basic Package - 5 Mbps
-              </NavLink>
-              <NavLink
-                to="/regular"
+              </Link>
+              <Link
+                to="/normal"
                 className="m-0 px-1 btn-outline-light rounded-pill text-decoration-none"
               >
                 Classic Package - 10 Mbps
-              </NavLink>
-              <NavLink
-                to="/regular"
+              </Link>
+              <Link
+                to="/normal"
                 className="m-0 px-1 btn-outline-light rounded-pill text-decoration-none"
               >
                 Jumbo Package - 20 Mbps
-              </NavLink>
-              <NavLink
+              </Link>
+              <Link
                 to="/corporate"
                 className="m-0 px-1 btn-outline-light rounded-pill text-decoration-none"
               >
                 Corporate Package - Custom
-              </NavLink>
+              </Link>
             </Nav>
             <Nav className="justify-content-center align-items-center mt-3">
               <h4 className="text-light fs-5">our FTP server</h4>

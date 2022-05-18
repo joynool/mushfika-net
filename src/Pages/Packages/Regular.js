@@ -75,7 +75,7 @@ function Regular() {
                       </p>
                     </Card.Body>
                     <Button
-                      variant="light"
+                      variant="outline-light"
                       className="btn-lg rounded-pill m-0 px-4 py-0"
                     >
                       <a
