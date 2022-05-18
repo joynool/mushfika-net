@@ -1,19 +1,19 @@
 import React from "react";
 import { Container, Image, Nav, Navbar, NavDropdown } from "react-bootstrap";
 //import logo from "../../images/logo.png";
-import { BsTelephone, BsEnvelope } from "react-icons/bs";
-import { BiSupport } from "react-icons/bi";
+//import { BsTelephone, BsEnvelope } from "react-icons/bs";
+//import { BiSupport } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
     <div className="sticky-top shadow">
-      <Navbar bg="light" variant="light" className=" bg-secondary">
+      {/* <Navbar bg="light" variant="light" className=" bg-secondary">
         <Container className="flex-column flex-lg-row">
           <Navbar.Text>
             <BsEnvelope className="fs-4" />{" "}
             <a
-              className="text-dark btn-info rounded-pill px-2 py-1 text-decoration-none"
+              className="text-dark px-2 py-1 text-decoration-none"
               href="mailto:netmushfika.bd@gmail.com"
             >
               netmushfika.bd@gmail.com
@@ -22,7 +22,7 @@ function Header() {
           <Navbar.Text>
             <BsTelephone className="fs-4" />{" "}
             <a
-              className="text-dark btn-info rounded-pill px-2 py-1 text-decoration-none"
+              className="text-dark px-2 py-1 text-decoration-none"
               href="tel:+8801624100101"
             >
               +880-1624100101, +880-258053424
@@ -31,14 +31,14 @@ function Header() {
           <Navbar.Text>
             <BiSupport className="fs-4" />{" "}
             <a
-              className="text-dark btn-info rounded-pill px-2 py-1 text-decoration-none"
+              className="text-dark px-2 py-1 text-decoration-none"
               href="tel:+8801624100101"
             >
               24x7 (9:00 AM - 10:00 PM)
             </a>
           </Navbar.Text>
         </Container>
-      </Navbar>
+      </Navbar> */}
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand>
