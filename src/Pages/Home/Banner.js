@@ -1,15 +1,19 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import bOne from "../../images/bOne.png";
-import bTwo from "../../images/bTwo.png";
-import bThree from "../../images/bThree.png";
+//import bOne from "../../images/bOne.png";
+//import bTwo from "../../images/bTwo.png";
+//import bThree from "../../images/bThree.png";
 
 function Banner() {
   return (
     <>
       <Carousel>
         <Carousel.Item>
-          <img className="d-block w-100" src={bThree} alt="First slide" />
+          <img
+            className="d-block w-100"
+            src="https://i.ibb.co/3pDKrHc/bThree.png"
+            alt="First slide"
+          />
           <Carousel.Caption>
             <h1
               className="mb-2"
@@ -23,7 +27,11 @@ function Banner() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={bTwo} alt="Second slide" />
+          <img
+            className="d-block w-100"
+            src="https://i.ibb.co/4gkQ4T7/bTwo.png"
+            alt="Second slide"
+          />
           <Carousel.Caption>
             <h1
               style={{
@@ -36,7 +44,11 @@ function Banner() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={bOne} alt="Third slide" />
+          <img
+            className="d-block w-100"
+            src="https://i.ibb.co/KDL4Qgs/bOne.png"
+            alt="Third slide"
+          />
           <Carousel.Caption>
             <h1
               style={{

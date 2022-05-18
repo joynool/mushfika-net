@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Col, Image, Row } from "react-bootstrap";
-import about from "../../images/about.png";
-import owner from "../../images/owner.jpg";
+//import about from "../../images/about.png";
+//import owner from "../../images/owner.jpg";
 import {
   FaQuoteRight,
   FaSatelliteDish,
@@ -17,7 +17,7 @@ function About() {
       <Header />
       <div className="d-flex flex-column justify-content-center align-items-center">
         <div>
-          <Image src={about} alt="" fluid />
+          <Image src="https://i.ibb.co/CHY1jdF/about.png" alt="" fluid />
         </div>
         <h1 className="text-center fw-normal text-dark display-1 animate__animated animate__pulse animate__infinite animate__delay-2s">
           ABOUT US
@@ -29,7 +29,7 @@ function About() {
         <div className="bg-primary d-flex flex-column flex-lg-row justify-content-center align-items-center my-5 p-4">
           <div className="d-flex flex-column justify-content-center align-items-center mx-3">
             <Image
-              src={owner}
+              src="https://i.ibb.co/Qdt4mbh/owner.jpg"
               width={200}
               height={200}
               alt=""

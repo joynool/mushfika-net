@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Image, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import logo from "../../images/logo.png";
+//import logo from "../../images/logo.png";
 import { BsTelephone, BsEnvelope } from "react-icons/bs";
 import { BiSupport } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
@@ -43,7 +43,12 @@ function Header() {
         <Container>
           <Navbar.Brand>
             <NavLink to={"/"}>
-              <Image src={logo} width="200px" alt="water drops" fluid />
+              <Image
+                src="https://i.ibb.co/0Vkfk1Y/logo.png"
+                width="200px"
+                alt="water drops"
+                fluid
+              />
             </NavLink>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />

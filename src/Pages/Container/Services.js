@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Col, Image, Row } from "react-bootstrap";
-import service from "../../images/service.png";
+//import service from "../../images/service.png";
 import {
   FaQuoteRight,
   FaTachometerAlt,
@@ -19,7 +19,11 @@ function Services() {
       <Header />
       <div className="d-flex flex-column justify-content-center align-items-center">
         <div>
-          <Image src={service} alt="" fluid />
+          <Image
+            src="https://i.ibb.co/FhZgXLG/service.png"
+            alt="services"
+            fluid
+          />
         </div>
         <h1 className="text-center fw-normal text-dark display-1 animate__animated animate__pulse animate__infinite animate__delay-2s">
           OUR SERVICES

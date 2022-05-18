@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Col, Image, Row } from "react-bootstrap";
 import { BsTelephone, BsPhone } from "react-icons/bs";
-import bkash from "../../images/bkash.png";
+//import bkash from "../../images/bkash.png";
 import {
   FaQuoteRight,
   FaNetworkWired,
@@ -35,7 +35,12 @@ function Why() {
       </div>
       <p className="fs-3 fw-light">We accept bKash Payment</p>
       <div className="d-flex flex-column flex-lg-row justify-content-center align-items-center bg-dark rounded-pill px-3 pt-1 mb-3">
-        <Image src={bkash} width={150} height={80} alt="bkash" />
+        <Image
+          src="https://i.ibb.co/7rhZbTx/bkash.png"
+          width={150}
+          height={80}
+          alt="bkash"
+        />
         <a
           className="text-dark btn-light fs-2 rounded-pill px-2 py-1 text-decoration-none"
           href="tel:01841900501"

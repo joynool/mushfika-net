@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Card, Col, Image, Row } from "react-bootstrap";
-import pack from "../../images/pack.png";
+//import pack from "../../images/pack.png";
 import Footer from "../Shared/Footer";
 import Header from "../Shared/Header";
 import { netPack } from "../../data";
@@ -13,7 +13,7 @@ function Regular() {
       <Header />
       <div className="d-flex flex-column justify-content-center align-items-center">
         <div>
-          <Image src={pack} alt="" fluid />
+          <Image src="https://i.ibb.co/48nJPpT/pack.png" alt="packages" fluid />
         </div>
         <h1 className="text-center fw-normal text-dark display-1 animate__animated animate__pulse animate__infinite animate__delay-2s">
           OUR PACKAGES

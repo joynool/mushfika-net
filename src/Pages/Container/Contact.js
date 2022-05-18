@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Form, Image, Nav, Navbar } from "react-bootstrap";
-import contact from "../../images/contact.png";
-import bkash from "../../images/bkash.png";
+//import contact from "../../images/contact.png";
+//import bkash from "../../images/bkash.png";
 import {
   FaQuoteRight,
   FaFacebook,
@@ -20,7 +20,7 @@ function Contact() {
       <Header />
       <div className="d-flex flex-column justify-content-center align-items-center">
         <div>
-          <Image src={contact} alt="" fluid />
+          <Image src="https://i.ibb.co/BgkRHdP/contact.png" alt="" fluid />
         </div>
         <h1 className="text-center fw-normal text-dark display-1 animate__animated animate__pulse animate__infinite animate__delay-2s">
           CONTACT US
@@ -118,7 +118,12 @@ function Contact() {
                 </a>
               </Navbar.Text>
               <Navbar.Text className="d-flex flex-column flex-lg-row justify-content-center align-items-center bg-dark rounded-pill px-3 pt-1 pb-0 my-3">
-                <Image src={bkash} width={120} height={60} alt="bkash" />
+                <Image
+                  src="https://i.ibb.co/7rhZbTx/bkash.png"
+                  width={120}
+                  height={60}
+                  alt="bkash"
+                />
                 <a
                   className="text-dark btn-light fs-2 rounded-pill px-2 py-1 text-decoration-none"
                   href="tel:01841900501"

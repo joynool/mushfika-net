@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Image, Nav, Navbar } from "react-bootstrap";
-import logo from "../../images/logo.png";
-import bkash from "../../images/bkash.png";
+//import logo from "../../images/logo.png";
+//import bkash from "../../images/bkash.png";
 import { BsGeoAlt, BsTelephone, BsEnvelope } from "react-icons/bs";
 import {
   FaQuoteRight,
@@ -22,7 +22,12 @@ function Footer() {
           <Nav className="d-flex flex-column align-items-center my-3">
             <Navbar.Brand href="/home" className="mx-auto">
               <NavLink to={"/home"}>
-                <Image src={logo} width="300px" alt="logo" fluid />
+                <Image
+                  src="https://i.ibb.co/0Vkfk1Y/logo.png"
+                  width="300px"
+                  alt="logo"
+                  fluid
+                />
               </NavLink>
             </Navbar.Brand>
             <div className="my-2 text-info fs-5">
@@ -143,7 +148,12 @@ function Footer() {
               </a>
             </Navbar.Text>
             <Navbar.Text className="d-flex flex-column flex-lg-row justify-content-center align-items-center border rounded-pill px-2 py-0 my-2">
-              <Image src={bkash} width={100} height={50} alt="bkash" />
+              <Image
+                src="https://i.ibb.co/7rhZbTx/bkash.png"
+                width={100}
+                height={50}
+                alt="bkash"
+              />
               <a
                 className="text-dark btn-light rounded-pill px-2 py-1 text-decoration-none"
                 href="tel:01841900501"
