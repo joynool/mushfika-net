@@ -20,7 +20,7 @@ function Services() {
       <div className="d-flex flex-column justify-content-center align-items-center">
         <div>
           <Image
-            src="https://i.ibb.co/FhZgXLG/service.png"
+            src="https://i.ibb.co/pytCTkN/service.png"
             alt="services"
             fluid
           />
@@ -34,7 +34,7 @@ function Services() {
         </h5>
         <div className="bg-primary my-5 p-4">
           <p className="px-2 text-light fs-5 lh-base text-center">
-            MUSHFIKA NET is providing variety of services to it's client from
+            MUSFIKA NET is providing variety of services to it's client from
             data devices to internet bandwidth. Spreading Effective Broadband
             Internet Connectivity in Bangladesh is our key concern. Moreover, we
             supply quality data connectivity products to our customer with a

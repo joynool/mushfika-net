@@ -44,7 +44,7 @@ function Header() {
           <Navbar.Brand>
             <NavLink to={"/"}>
               <Image
-                src="https://i.ibb.co/0Vkfk1Y/logo.png"
+                src="https://i.ibb.co/2krBM9J/logo.png"
                 width="200px"
                 alt="water drops"
                 fluid

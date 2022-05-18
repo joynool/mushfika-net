@@ -11,7 +11,7 @@ function Banner() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://i.ibb.co/3pDKrHc/bThree.png"
+            src="https://i.ibb.co/SyNLDZR/bOne.png"
             alt="First slide"
           />
           <Carousel.Caption>
@@ -29,7 +29,7 @@ function Banner() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://i.ibb.co/4gkQ4T7/bTwo.png"
+            src="https://i.ibb.co/nRDr9WY/bTwo.png"
             alt="Second slide"
           />
           <Carousel.Caption>
@@ -46,7 +46,7 @@ function Banner() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://i.ibb.co/KDL4Qgs/bOne.png"
+            src="https://i.ibb.co/j42TJgP/bThree.png"
             alt="Third slide"
           />
           <Carousel.Caption>

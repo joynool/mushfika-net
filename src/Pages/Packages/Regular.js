@@ -13,7 +13,7 @@ function Regular() {
       <Header />
       <div className="d-flex flex-column justify-content-center align-items-center">
         <div>
-          <Image src="https://i.ibb.co/48nJPpT/pack.png" alt="packages" fluid />
+          <Image src="https://i.ibb.co/jwt0F21/pack.png" alt="packages" fluid />
         </div>
         <h1 className="text-center fw-normal text-dark display-1 animate__animated animate__pulse animate__infinite animate__delay-2s">
           OUR PACKAGES
@@ -29,7 +29,7 @@ function Regular() {
           </p>
         </div>
         <div className="container mt-5">
-          <Row xs={1} md={5} className="g-4">
+          <Row xs={1} md={5} className="g-3">
             {netPack.map((np) => (
               <Col key={np.id}>
                 <Card className="bg-success text-center">

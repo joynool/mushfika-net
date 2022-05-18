@@ -1,5 +1,5 @@
-import React from "react";
-import { Container, Image, Nav, Navbar } from "react-bootstrap";
+import React, { useState } from "react";
+import { Button, Container, Image, Modal, Nav, Navbar } from "react-bootstrap";
 //import logo from "../../images/logo.png";
 //import bkash from "../../images/bkash.png";
 import { BsGeoAlt, BsTelephone, BsEnvelope } from "react-icons/bs";
@@ -14,7 +14,39 @@ import {
 import { BiSupport } from "react-icons/bi";
 import { Link, NavLink } from "react-router-dom";
 
+function MyVerticallyCenteredModal(props) {
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Modal heading
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <h4>Centered Modal</h4>
+        <Image
+          src="https://i.ibb.co/19L7CsW/bkash.png"
+          width={100}
+          height={50}
+          alt="bkash"
+          className="bg-dark"
+        />
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
+
 function Footer() {
+  const [modalShow, setModalShow] = useState(false);
+
   return (
     <>
       <Navbar bg="dark" variant="dark" className="mt-5 py-3">
@@ -23,7 +55,7 @@ function Footer() {
             <Navbar.Brand href="/home" className="mx-auto">
               <NavLink to={"/home"}>
                 <Image
-                  src="https://i.ibb.co/0Vkfk1Y/logo.png"
+                  src="https://i.ibb.co/2krBM9J/logo.png"
                   width="300px"
                   alt="logo"
                   fluid
@@ -105,13 +137,13 @@ function Footer() {
                 to="/normal"
                 className="m-0 px-1 btn-outline-light rounded-pill text-decoration-none"
               >
-                Jumbo Package - 20 Mbps
+                Classic Package - 15 Mbps
               </Link>
               <Link
-                to="/corporate"
+                to="/normal"
                 className="m-0 px-1 btn-outline-light rounded-pill text-decoration-none"
               >
-                Corporate Package - Custom
+                Jumbo Package - 20 Mbps
               </Link>
             </Nav>
             <Nav className="justify-content-center align-items-center mt-3">
@@ -147,32 +179,36 @@ function Footer() {
                 <BiSupport className="fs-4" /> +880-258053424
               </a>
             </Navbar.Text>
-            <Navbar.Text className="d-flex flex-column flex-lg-row justify-content-center align-items-center border rounded-pill px-2 py-0 my-2">
+            <Navbar.Text
+              onClick={() => setModalShow(true)}
+              className="d-flex flex-column flex-lg-row justify-content-center align-items-center btn btn-dark border rounded-pill px-2 py-0 my-2"
+            >
               <Image
-                src="https://i.ibb.co/7rhZbTx/bkash.png"
+                src="https://i.ibb.co/19L7CsW/bkash.png"
                 width={100}
                 height={50}
                 alt="bkash"
               />
-              <a
-                className="text-dark btn-light rounded-pill px-2 py-1 text-decoration-none"
-                href="tel:01841900501"
-              >
+              <p className="bg-light text-dark rounded-pill my-auto px-2 py-1">
                 01841900501
-              </a>
+              </p>
             </Navbar.Text>
           </Nav>
         </Container>
       </Navbar>
       <Navbar bg="light" variant="light">
         <Navbar.Text className="mx-auto">
-          &copy; 2022, <NavLink to={"/home"}>Mushfika Net</NavLink>. All Rights
+          &copy; 2022, <NavLink to={"/home"}>Musfika Net</NavLink>. All Rights
           Reserved.
         </Navbar.Text>
         <a href="#">
           <FaChevronCircleUp className="fs-2 me-2 p-0 rounded-pill shadow" />
         </a>
       </Navbar>
+      <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
     </>
   );
 }

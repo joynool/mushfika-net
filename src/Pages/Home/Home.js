@@ -5,12 +5,12 @@ import Banner from "./Banner";
 import Packages from "./Packages";
 import Why from "./Why";
 
-function Home() {
+function Home({ setModalShow }) {
   return (
     <>
       <Header />
       <Banner />
-      <Why />
+      <Why setModalShow={setModalShow} />
       <Packages />
       <Footer />
     </>

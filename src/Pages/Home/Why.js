@@ -10,11 +10,11 @@ import {
   FaHeadset,
 } from "react-icons/fa";
 
-function Why() {
+function Why({ setModalShow }) {
   return (
     <div className="d-flex flex-column justify-content-center align-items-center">
       <h1 className="pt-5 text-center display-1 animate__animated animate__pulse animate__infinite animate__delay-2s">
-        MUSHFIKA NET
+        MUSFIKA NET
       </h1>
       <h5 className="fw-base mt-3 text-center">
         Ensuring Super Fast and Reliable Internet Connectivity...
@@ -34,23 +34,23 @@ function Why() {
         </a>
       </div>
       <p className="fs-3 fw-light">We accept bKash Payment</p>
-      <div className="d-flex flex-column flex-lg-row justify-content-center align-items-center bg-dark rounded-pill px-3 pt-1 mb-3">
+      <div
+        onClick={() => setModalShow(true)}
+        className="d-flex flex-column flex-lg-row justify-content-center align-items-center bg-dark btn btn-light rounded-pill px-3 pt-1 mb-3"
+      >
         <Image
-          src="https://i.ibb.co/7rhZbTx/bkash.png"
+          src="https://i.ibb.co/19L7CsW/bkash.png"
           width={150}
           height={80}
           alt="bkash"
         />
-        <a
-          className="text-dark btn-light fs-2 rounded-pill px-2 py-1 text-decoration-none"
-          href="tel:01841900501"
-        >
+        <p className="bg-light text-dark fs-2 rounded-pill my-auto px-2 py-1">
           01841900501
-        </a>
+        </p>
       </div>
       <div className="bg-primary my-4 p-4">
         <p className="text-light fs-5 py-3 lh-base text-center">
-          MUSHFIKA NET is a renounce company in Bangladesh as Internet Service
+          MUSFIKA NET is a renounce company in Bangladesh as Internet Service
           Provider (ISP). We are dedicated to ensure high performance and secure
           Internet Connectivity to our customer with our compromising the
           quality of services. Our aim is to spread out Super Fast Broadband
@@ -61,7 +61,7 @@ function Why() {
         <div className="text-center mt-4 mb-4">
           <h1 className="py-5 display-5 text-decoration-underline">
             <FaQuoteRight className="text-info me-2" />
-            Why Mushfika Net
+            Why Musfika Net
           </h1>
         </div>
         <Row xs={1} md={2} className="g-4">
@@ -83,8 +83,8 @@ function Why() {
               <Card.Body>
                 <Card.Title>Live TV & FTP Server</Card.Title>
                 <Card.Text>
-                  Besides Live TV channel, we have huge collection on our own
-                  FTP server that you will love.
+                  Besides Live TV channel, we have huge collection on our FTP
+                  server that you will love for sure.
                 </Card.Text>
               </Card.Body>
             </Card>

@@ -14,20 +14,20 @@ import { BiSupport } from "react-icons/bi";
 import Header from "../Shared/Header";
 import Footer from "../Shared/Footer";
 
-function Contact() {
+function Contact({ setModalShow }) {
   return (
     <>
       <Header />
       <div className="d-flex flex-column justify-content-center align-items-center">
         <div>
-          <Image src="https://i.ibb.co/BgkRHdP/contact.png" alt="" fluid />
+          <Image src="https://i.ibb.co/7nt0sYQ/contact.png" alt="" fluid />
         </div>
         <h1 className="text-center fw-normal text-dark display-1 animate__animated animate__pulse animate__infinite animate__delay-2s">
           CONTACT US
         </h1>
         <FaQuoteRight className="display-4 text-info mt-4" />
         <h5 className="fw-light fs-2 text-center">
-          We are dedicated to provide support to out clients.
+          We are dedicated to provide support to our clients.
         </h5>
         <div className="bg-primary w-100 mt-5 mb-2 p-4">
           <p className="px-2 text-light fs-1 lh-base text-center">
@@ -36,8 +36,8 @@ function Contact() {
         </div>
         <div className="container my-5 d-flex flex-column flex-lg-row justify-content-evenly align-items-center">
           <div>
-            <p className="fs-3 fw-light bg-info rounded-pill px-2 my-4 shadow">
-              Send Your Message to us...
+            <p className="fs-3 fw-light bg-info text-center rounded-pill px-2 my-4 shadow">
+              Send Your Message To Us...
             </p>
             <Form className="text-center">
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -74,12 +74,12 @@ function Contact() {
                 <Form.Control as="textarea" rows={3} required />
               </Form.Group>
               <Button variant="primary" type="submit" className="px-4 shadow">
-                Send
+                Send Message
               </Button>
             </Form>
           </div>
           <div className="">
-            <p className="fs-3 fw-light bg-info rounded-pill px-2 mt-5 shadow">
+            <p className="fs-3 fw-light bg-info text-center rounded-pill px-2 mt-5 shadow">
               Our Contact Info...
             </p>
             <Nav className="flex-column align-items-center">
@@ -117,19 +117,21 @@ function Contact() {
                   <BiSupport className="fs-4" /> +880-258053424
                 </a>
               </Navbar.Text>
-              <Navbar.Text className="d-flex flex-column flex-lg-row justify-content-center align-items-center bg-dark rounded-pill px-3 pt-1 pb-0 my-3">
+              <Navbar.Text
+                onClick={() => setModalShow(true)}
+                className="d-flex flex-column flex-lg-row justify-content-center
+                align-items-center bg-dark btn btn-light rounded-pill px-3 pt-1
+                mb-3"
+              >
                 <Image
-                  src="https://i.ibb.co/7rhZbTx/bkash.png"
+                  src="https://i.ibb.co/19L7CsW/bkash.png"
                   width={120}
                   height={60}
                   alt="bkash"
                 />
-                <a
-                  className="text-dark btn-light fs-2 rounded-pill px-2 py-1 text-decoration-none"
-                  href="tel:01841900501"
-                >
+                <p className="bg-light text-dark fs-2 rounded-pill my-auto px-2">
                   01841900501
-                </a>
+                </p>
               </Navbar.Text>
             </Nav>
             <Nav className="flex-column align-items-center">
