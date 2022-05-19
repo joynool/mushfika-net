@@ -24,7 +24,15 @@ function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs
+    if (form.current) {
+      Swal.fire(
+        "Thank You!",
+        "Your message successfully delivered!",
+        "success"
+      );
+    }
+    e.target.reset();
+    /* emailjs
       .sendForm(
         "YOUR_SERVICE_ID",
         "YOUR_TEMPLATE_ID",
@@ -51,7 +59,7 @@ function Contact() {
         (error) => {
           console.log(error.text);
         }
-      );
+      ); */
   };
 
   return (
