@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Image, Modal } from "react-bootstrap";
-import bPay from "../../images/bPay.png";
+//import bPay from "../../images/bPay.png";
 
 function MyVerticallyCenteredModal(props) {
   return (
@@ -16,7 +16,12 @@ function MyVerticallyCenteredModal(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Image src={bPay} width="100%" height="100%" alt="bKash Payment" />
+        <Image
+          src="https://i.ibb.co/h9X7B0D/bPay.png"
+          width="100%"
+          height="100%"
+          alt="bKash Payment"
+        />
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>

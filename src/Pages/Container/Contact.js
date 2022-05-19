@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Button, Form, Image, Nav, Navbar } from "react-bootstrap";
 //import contact from "../../images/contact.png";
 //import bkash from "../../images/bkash.png";
@@ -14,9 +14,45 @@ import { BiSupport } from "react-icons/bi";
 import Header from "../Shared/Header";
 import Footer from "../Shared/Footer";
 import CashModal from "../Modals/CashModal";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
 function Contact() {
   const [modalShow, setModalShow] = useState(false);
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        form.current,
+        "YOUR_PUBLIC_KEY"
+      )
+      .then(
+        (result) => {
+          if (result) {
+            Swal.fire(
+              "Thank You!",
+              "Your message successfully delivered!",
+              "success"
+            );
+          } else {
+            Swal.fire({
+              icon: "error",
+              title: "Something went wrong!",
+              text: "Your message has not been delivered!",
+            });
+          }
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   return (
     <>
@@ -42,18 +78,24 @@ function Contact() {
             <p className="fs-3 fw-light bg-info text-center rounded-pill px-2 my-4 shadow">
               Send Your Message To Us...
             </p>
-            <Form className="text-center">
+            <Form ref={form} onSubmit={sendEmail} className="text-center">
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Name</Form.Label>
                 <Form.Control
                   type="text"
+                  name="name"
                   placeholder="Enter your name"
                   required
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" required />
+                <Form.Control
+                  type="email"
+                  name="email"
+                  placeholder="Enter email"
+                  required
+                />
                 <Form.Text className="text-muted">
                   We'll never share your email with anyone else.
                 </Form.Text>
@@ -62,6 +104,7 @@ function Contact() {
                 <Form.Label>Mobile Number</Form.Label>
                 <Form.Control
                   type="tel"
+                  name="tel"
                   placeholder="Enter your mobile number"
                   required
                 />
@@ -74,7 +117,7 @@ function Contact() {
                 controlId="exampleForm.ControlTextarea1"
               >
                 <Form.Label>Share Your Opinion</Form.Label>
-                <Form.Control as="textarea" rows={3} required />
+                <Form.Control as="textarea" name="message" rows={3} required />
               </Form.Group>
               <Button variant="primary" type="submit" className="px-4 shadow">
                 Send Message
