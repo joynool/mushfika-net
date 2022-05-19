@@ -87,7 +87,7 @@ function Contact() {
             </p>
             <Nav className="flex-column align-items-center">
               <BsGeoAlt className="display-4" />
-              <div className="fs-6 text-dark mt-2">
+              <div className="fs-6 text-dark text-nowrap mt-2">
                 <p className="mb-0">
                   <BsGeoAlt />
                   &nbsp;&nbsp;71 Borobag, Mirpur 2, Dhaka 1216

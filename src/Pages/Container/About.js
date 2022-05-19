@@ -50,7 +50,7 @@ function About() {
           </p>
         </div>
         <div className="container mt-5">
-          <Row xs={1} md={3} className="g-4">
+          <Row xs={1} md={2} lg={3} className="g-4">
             <Col>
               <Card className="shadow text-center">
                 <FaSatelliteDish className="text-primary display-1 mx-auto mt-3" />

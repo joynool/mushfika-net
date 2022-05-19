@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Button, Container, Image, Nav, Navbar } from "react-bootstrap";
+import {
+  Button,
+  Col,
+  Container,
+  Image,
+  Nav,
+  Navbar,
+  Row,
+} from "react-bootstrap";
 //import logo from "../../images/logo.png";
 //import bkash from "../../images/bkash.png";
 import { BsGeoAlt, BsTelephone, BsEnvelope } from "react-icons/bs";
@@ -31,155 +39,164 @@ function Footer() {
   return (
     <>
       <Navbar bg="dark" variant="dark" className="mt-5 py-4">
-        <Container className="flex-column flex-lg-row">
-          <Nav className="d-flex flex-column align-items-center my-3">
-            <Navbar.Brand href="/home" className="mx-auto">
-              <NavLink to={"/home"}>
-                <Image
-                  src="https://i.ibb.co/2krBM9J/logo.png"
-                  width="300px"
-                  alt="logo"
-                  fluid
-                />
-              </NavLink>
-            </Navbar.Brand>
-            <div className="my-2 text-info fs-5">
-              <FaQuoteRight className="fs-3 text-white" />
-              &nbsp; We Connect... &nbsp;
-            </div>
-          </Nav>
-          <Nav className="d-flex flex-column mb-3">
-            <Nav className="flex-column align-items-center mt-3">
-              <h4 className="text-info fs-5 text-decoration-underline">
-                Contact Info
-              </h4>
-              <div className="fs-6 text-white mt-2">
-                <p className="mb-0">
-                  <BsGeoAlt />
-                  &nbsp;&nbsp;71 Borobag, Mirpur 2, Dhaka 1216
-                </p>
-                <p className="mb-0">
-                  <BsEnvelope />
-                  &nbsp;&nbsp;Email: netmushfika.bd@gmail.com
-                </p>
-                <p>
-                  <BsTelephone />
-                  &nbsp;&nbsp;Phone: 01624100101, 0258053424
-                </p>
-              </div>
+        <Row xs={1} md={2} lg={4} className="g-0 g-lg-5 m-auto">
+          <Col className="m-auto">
+            <Nav className="d-flex flex-column align-items-center px-1">
+              <Navbar.Brand href="/home" className="mx-auto">
+                <NavLink to={"/home"}>
+                  <Image
+                    src="https://i.ibb.co/2krBM9J/logo.png"
+                    width="100%"
+                    alt="logo"
+                    fluid
+                  />
+                </NavLink>
+              </Navbar.Brand>
+              <Navbar.Text className="my-0 text-info fs-5">
+                <FaQuoteRight className="fs-3 text-white" />
+                &nbsp; We Connect... &nbsp;
+              </Navbar.Text>
             </Nav>
-            <Nav className="flex-column align-items-center">
-              <h4 className="text-info fs-5 text-decoration-underline">
-                Follow Us
-              </h4>
-              <Nav>
-                <Nav.Link
-                  href="https://www.facebook.com/musfika.net"
-                  className="text-white fs-3 m-0 p-0"
-                  title="Facebook"
-                >
-                  <FaFacebook className="btn-outline-light rounded mx-2" />
-                </Nav.Link>
-                <Nav.Link
-                  href="/home"
-                  className="text-white fs-3 m-0 p-0"
-                  title="Twitter"
-                >
-                  <FaTwitter className="btn-outline-light rounded mx-2" />
-                </Nav.Link>
-                <Nav.Link
-                  href="/home"
-                  className="text-white fs-3 m-0 p-0"
-                  title="Instagram"
-                >
-                  <FaInstagram className="btn-outline-light rounded mx-2" />
-                </Nav.Link>
+          </Col>
+          <Col className="m-auto">
+            <Nav className="d-flex flex-column">
+              <Nav className="flex-column align-items-center mt-3">
+                <h4 className="text-info fs-5 text-decoration-underline">
+                  Contact Info
+                </h4>
+                <div className="fs-6 lh-lg text-nowrap text-white mt-2">
+                  <p className="mb-0">
+                    <BsGeoAlt />
+                    &nbsp;&nbsp;71 Borobag, Mirpur 2, Dhaka 1216
+                  </p>
+                  <p className="mb-0">
+                    <BsEnvelope />
+                    &nbsp;&nbsp;Email: netmushfika.bd@gmail.com
+                  </p>
+                  <p className="">
+                    <BsTelephone />
+                    &nbsp;&nbsp;Phone: 01624100101, 0258053424
+                  </p>
+                </div>
+              </Nav>
+              <Nav className="flex-column align-items-center">
+                <h4 className="text-info fs-5 text-decoration-underline">
+                  Follow Us
+                </h4>
+                <Nav>
+                  <Nav.Link
+                    href="https://www.facebook.com/musfika.net"
+                    className="text-white fs-3 m-0 p-0"
+                    title="Facebook"
+                  >
+                    <FaFacebook className="btn-outline-light rounded mx-2" />
+                  </Nav.Link>
+                  <Nav.Link
+                    href="/home"
+                    className="text-white fs-3 m-0 p-0"
+                    title="Twitter"
+                  >
+                    <FaTwitter className="btn-outline-light rounded mx-2" />
+                  </Nav.Link>
+                  <Nav.Link
+                    href="/home"
+                    className="text-white fs-3 m-0 p-0"
+                    title="Instagram"
+                  >
+                    <FaInstagram className="btn-outline-light rounded mx-2" />
+                  </Nav.Link>
+                </Nav>
               </Nav>
             </Nav>
-          </Nav>
-          <Nav className="d-flex flex-column">
+          </Col>
+          <Col className="m-auto">
+            <Nav className="d-flex flex-column">
+              <Nav className="flex-column justify-content-center align-items-center text-center">
+                <h4 className="text-info fs-5 text-decoration-underline">
+                  Popular Packages
+                </h4>
+                <Button
+                  onClick={() => packDetails(5)}
+                  variant="outline-light"
+                  className="m-0 p-1 border-0 rounded-pill"
+                >
+                  Basic Package - 5 Mbps
+                </Button>
+                <Button
+                  onClick={() => packDetails(10)}
+                  variant="outline-light"
+                  className="m-0 p-1 border-0 rounded-pill"
+                >
+                  Classic Package - 10 Mbps
+                </Button>
+                <Button
+                  onClick={() => packDetails(15)}
+                  variant="outline-light"
+                  className="m-0 p-1 border-0 rounded-pill"
+                >
+                  Classic Package - 15 Mbps
+                </Button>
+                <Button
+                  onClick={() => packDetails(20)}
+                  variant="outline-light"
+                  className="m-0 p-1 border-0 rounded-pill"
+                >
+                  Jumbo Package - 20 Mbps
+                </Button>
+              </Nav>
+              <Nav className="justify-content-center align-items-center mt-3">
+                <h4 className="text-light fs-5">our FTP server</h4>
+                <Nav>
+                  <Nav.Link
+                    href="http://10.16.100.244"
+                    className="text-white m-0 p-0"
+                    title="FTP server"
+                  >
+                    <FaServer className="fs-1 btn-outline-info rounded mx-2 p-1" />
+                  </Nav.Link>
+                </Nav>
+              </Nav>
+            </Nav>
+          </Col>
+          <Col className="m-auto">
             <Nav className="flex-column text-center">
-              <h4 className="text-info fs-5 text-decoration-underline">
-                Popular Packages
+              <h4 className="text-info fs-5 text-decoration-underline mt-2">
+                For Support
               </h4>
-              <Button
-                onClick={() => packDetails(5)}
-                variant="outline-light"
-                className="m-0 p-1 border-0 rounded-pill"
-              >
-                Basic Package - 5 Mbps
-              </Button>
-              <Button
-                onClick={() => packDetails(10)}
-                variant="outline-light"
-                className="m-0 p-1 border-0 rounded-pill"
-              >
-                Classic Package - 10 Mbps
-              </Button>
-              <Button
-                onClick={() => packDetails(15)}
-                variant="outline-light"
-                className="m-0 p-1 border-0 rounded-pill"
-              >
-                Classic Package - 15 Mbps
-              </Button>
-              <Button
-                onClick={() => packDetails(20)}
-                variant="outline-light"
-                className="m-0 p-1 border-0 rounded-pill"
-              >
-                Jumbo Package - 20 Mbps
-              </Button>
-            </Nav>
-            <Nav className="justify-content-center align-items-center mt-3">
-              <h4 className="text-light fs-5">our FTP server</h4>
-              <Nav>
-                <Nav.Link
-                  href="http://10.16.100.244"
-                  className="text-white m-0 p-0"
-                  title="FTP server"
+              <Navbar.Text>
+                <a
+                  className="text-dark btn-info rounded-pill px-2 py-1 text-decoration-none"
+                  href="tel:+8801624100101"
                 >
-                  <FaServer className="fs-1 btn-outline-info rounded mx-2 p-1" />
-                </Nav.Link>
-              </Nav>
+                  <BiSupport className="fs-4" /> +880-1624100101
+                </a>
+              </Navbar.Text>
+              <Navbar.Text>
+                <a
+                  className="text-dark btn-info rounded-pill px-2 py-1 text-decoration-none"
+                  href="tel:+880258053424"
+                >
+                  <BiSupport className="fs-4" /> +880-258053424
+                </a>
+              </Navbar.Text>
             </Nav>
-          </Nav>
-          <Nav className="flex-column text-center">
-            <h4 className="text-info fs-5 text-decoration-underline mt-2">
-              For Support
-            </h4>
-            <Navbar.Text>
-              <a
-                className="text-dark btn-info rounded-pill px-2 py-1 text-decoration-none"
-                href="tel:+8801624100101"
-              >
-                <BiSupport className="fs-4" /> +880-1624100101
-              </a>
-            </Navbar.Text>
-            <Navbar.Text>
-              <a
-                className="text-dark btn-info rounded-pill px-2 py-1 text-decoration-none"
-                href="tel:+880258053424"
-              >
-                <BiSupport className="fs-4" /> +880-258053424
-              </a>
-            </Navbar.Text>
             <Navbar.Text
               onClick={() => setModalShow(true)}
-              className="d-flex flex-column flex-lg-row justify-content-center align-items-center btn btn-dark border rounded-pill px-2 py-0 my-2"
+              className="d-flex flex-column justify-content-center align-items-center btn btn-dark px-0 mx-auto my-2"
             >
               <Image
                 src="https://i.ibb.co/19L7CsW/bkash.png"
-                width={100}
-                height={50}
+                width={150}
+                height={80}
                 alt="bkash"
+                fluid
               />
-              <p className="bg-light text-dark rounded-pill my-auto px-2 py-1">
+              <p className="bg-light fs-4 fw-bold text-dark rounded-pill my-auto px-3 py-1">
                 01841900501
               </p>
             </Navbar.Text>
-          </Nav>
-        </Container>
+          </Col>
+        </Row>
       </Navbar>
       <Navbar bg="light" variant="light">
         <Navbar.Text className="mx-auto">

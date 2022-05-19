@@ -24,12 +24,12 @@ function Packages() {
           </h1>
         </div>
         <div className="container">
-          <Row xs={1} md={4} className="g-5">
+          <Row xs={1} md={2} lg={4} className="g-5">
             <Col>
               <Card className="bg-success text-center animate__animated animate__pulse animate__infinite animate__delay-2s">
                 <Card.Body>
-                  <Card.Title className="display-4 text-light">
-                    Basic 5Mbps
+                  <Card.Title className="fs-1 text-light">
+                    Basic &nbsp;5 Mbps
                   </Card.Title>
                   <Button
                     onClick={() => packDetails(5)}
@@ -44,8 +44,8 @@ function Packages() {
             <Col>
               <Card className="bg-primary text-center animate__animated animate__pulse animate__infinite animate__delay-2s">
                 <Card.Body>
-                  <Card.Title className="display-4 text-light">
-                    Classic 10Mbps
+                  <Card.Title className="fs-1 text-light">
+                    Classic 10 Mbps
                   </Card.Title>
                   <Button
                     onClick={() => packDetails(10)}
@@ -60,8 +60,8 @@ function Packages() {
             <Col>
               <Card className="bg-warning text-center animate__animated animate__pulse animate__infinite animate__delay-2s">
                 <Card.Body>
-                  <Card.Title className="display-4 text-light">
-                    Classic 15Mbps
+                  <Card.Title className="fs-1 text-light">
+                    Classic 15 Mbps
                   </Card.Title>
                   <Button
                     onClick={() => packDetails(15)}
@@ -76,8 +76,8 @@ function Packages() {
             <Col>
               <Card className="bg-danger text-center animate__animated animate__pulse animate__infinite animate__delay-2s">
                 <Card.Body>
-                  <Card.Title className="display-4 text-light">
-                    Jumbo 20Mbps
+                  <Card.Title className="fs-1 text-light">
+                    Jumbo 20 Mbps
                   </Card.Title>
                   <Button
                     onClick={() => packDetails(20)}

@@ -29,7 +29,7 @@ function Regular() {
           </p>
         </div>
         <div className="container mt-5">
-          <Row xs={1} md={5} className="g-3">
+          <Row xs={1} md={2} lg={3} xl={4} xxl={5} className="g-3">
             {netPack.map((np) => (
               <Col key={np.id}>
                 <Card className="bg-success text-center">

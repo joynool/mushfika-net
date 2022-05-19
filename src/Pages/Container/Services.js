@@ -43,7 +43,7 @@ function Services() {
           </p>
         </div>
         <div className="container my-5">
-          <Row xs={1} md={3} className="g-4">
+          <Row xs={1} md={2} lg={3} className="g-4">
             <Col>
               <Card className="shadow text-center">
                 <FaTachometerAlt className="text-primary display-1 mx-auto mt-3" />
