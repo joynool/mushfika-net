@@ -5,7 +5,7 @@ import Footer from "../Shared/Footer";
 import Header from "../Shared/Header";
 import { netPack } from "../../data";
 import { FaQuoteRight } from "react-icons/fa";
-import { TiTickOutline } from "react-icons/ti";
+import { AiFillCheckCircle } from "react-icons/ai";
 
 function Regular() {
   return (
@@ -39,35 +39,35 @@ function Regular() {
                     </Card.Header>
                     <Card.Body className="text-light text-start">
                       <p className="m-0 p-0">
-                        <TiTickOutline className="fs-3" />
+                        <AiFillCheckCircle className="fs-5 me-2 text-dark" />
                         Fiber Optics
                       </p>
                       <p className="m-0 p-0">
-                        <TiTickOutline className="fs-3" />
+                        <AiFillCheckCircle className="fs-5 me-2 text-dark" />
                         24 Hours Unlimited
                       </p>
                       <p className="m-0 p-0">
-                        <TiTickOutline className="fs-3" />
+                        <AiFillCheckCircle className="fs-5 me-2 text-dark" />
                         Live TV
                       </p>
                       <p className="m-0 p-0">
-                        <TiTickOutline className="fs-3" />
+                        <AiFillCheckCircle className="fs-5 me-2 text-dark" />
                         Large FTP server
                       </p>
                       <p className="m-0 p-0">
-                        <TiTickOutline className="fs-3" />
+                        <AiFillCheckCircle className="fs-5 me-2 text-dark" />
                         Connected to BDIX
                       </p>
                       <p className="m-0 p-0">
-                        <TiTickOutline className="fs-3" />
+                        <AiFillCheckCircle className="fs-5 me-2 text-dark" />
                         Buffer less Youtube
                       </p>
                       <p className="m-0 p-0">
-                        <TiTickOutline className="fs-3" />
+                        <AiFillCheckCircle className="fs-5 me-2 text-dark" />
                         Buffer less Facebook
                       </p>
-                      <p className="m-0 p-0">
-                        <TiTickOutline className="fs-3" />
+                      <p className="mb-2 p-0">
+                        <AiFillCheckCircle className="fs-5 me-2 text-dark" />
                         24/7 Support
                       </p>
                       <p className="m-0 p-0 bg-dark fs-5 text-center text-light rounded-pill">
