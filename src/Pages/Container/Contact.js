@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Form, Image, Nav, Navbar } from "react-bootstrap";
 //import contact from "../../images/contact.png";
 //import bkash from "../../images/bkash.png";
@@ -13,8 +13,11 @@ import { BsGeoAlt, BsTelephone, BsEnvelope } from "react-icons/bs";
 import { BiSupport } from "react-icons/bi";
 import Header from "../Shared/Header";
 import Footer from "../Shared/Footer";
+import CashModal from "../Modals/CashModal";
 
-function Contact({ setModalShow }) {
+function Contact() {
+  const [modalShow, setModalShow] = useState(false);
+
   return (
     <>
       <Header />
@@ -182,6 +185,7 @@ function Contact({ setModalShow }) {
         </div>
       </div>
       <Footer />
+      <CashModal modalShow={modalShow} setModalShow={setModalShow} />
     </>
   );
 }

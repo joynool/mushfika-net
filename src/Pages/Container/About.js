@@ -71,7 +71,7 @@ function About() {
                   <Card.Title>High Performance at Low Cost</Card.Title>
                   <Card.Text>
                     We are providing high speed data connectivity in rigorous
-                    and most effective way at reasonable price at you door.
+                    and most effective way at reasonable price at your door.
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -83,7 +83,7 @@ function About() {
                   <Card.Title>Reliable Customer Services</Card.Title>
                   <Card.Text>
                     We are dedicated not only to establish date connectivity but
-                    also to ensure 24/7 support to our clients.
+                    also to ensure 24/7 support to our valuable clients.
                   </Card.Text>
                 </Card.Body>
               </Card>

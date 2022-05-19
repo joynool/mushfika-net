@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Container, Image, Modal, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Image, Nav, Navbar } from "react-bootstrap";
 //import logo from "../../images/logo.png";
 //import bkash from "../../images/bkash.png";
 import { BsGeoAlt, BsTelephone, BsEnvelope } from "react-icons/bs";
@@ -12,44 +12,25 @@ import {
   FaChevronCircleUp,
 } from "react-icons/fa";
 import { BiSupport } from "react-icons/bi";
-import { Link, NavLink } from "react-router-dom";
-
-function MyVerticallyCenteredModal(props) {
-  return (
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <h4>Centered Modal</h4>
-        <Image
-          src="https://i.ibb.co/19L7CsW/bkash.png"
-          width={100}
-          height={50}
-          alt="bkash"
-          className="bg-dark"
-        />
-      </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
-      </Modal.Footer>
-    </Modal>
-  );
-}
+import { NavLink } from "react-router-dom";
+import CashModal from "../Modals/CashModal";
+import PackModal from "../Modals/PackModal";
 
 function Footer() {
   const [modalShow, setModalShow] = useState(false);
+  const [pack, setPack] = useState(0);
+  const [packModalShow, setPackModalShow] = useState(false);
+
+  const packDetails = (pack) => {
+    setPack(pack);
+    if (pack !== 0) {
+      setPackModalShow(true);
+    }
+  };
 
   return (
     <>
-      <Navbar bg="dark" variant="dark" className="mt-5 py-3">
+      <Navbar bg="dark" variant="dark" className="mt-5 py-4">
         <Container className="flex-column flex-lg-row">
           <Nav className="d-flex flex-column align-items-center my-3">
             <Navbar.Brand href="/home" className="mx-auto">
@@ -94,21 +75,21 @@ function Footer() {
               <Nav>
                 <Nav.Link
                   href="https://www.facebook.com/musfika.net"
-                  className="text-white fs-4 m-0 p-0"
+                  className="text-white fs-3 m-0 p-0"
                   title="Facebook"
                 >
                   <FaFacebook className="btn-outline-light rounded mx-2" />
                 </Nav.Link>
                 <Nav.Link
                   href="/home"
-                  className="text-white fs-4 m-0 p-0"
+                  className="text-white fs-3 m-0 p-0"
                   title="Twitter"
                 >
                   <FaTwitter className="btn-outline-light rounded mx-2" />
                 </Nav.Link>
                 <Nav.Link
                   href="/home"
-                  className="text-white fs-4 m-0 p-0"
+                  className="text-white fs-3 m-0 p-0"
                   title="Instagram"
                 >
                   <FaInstagram className="btn-outline-light rounded mx-2" />
@@ -121,30 +102,34 @@ function Footer() {
               <h4 className="text-info fs-5 text-decoration-underline">
                 Popular Packages
               </h4>
-              <Link
-                to="/normal"
-                className="m-0 px-1 btn-outline-light rounded-pill text-decoration-none"
+              <Button
+                onClick={() => packDetails(5)}
+                variant="outline-light"
+                className="m-0 p-1 border-0 rounded-pill"
               >
                 Basic Package - 5 Mbps
-              </Link>
-              <Link
-                to="/normal"
-                className="m-0 px-1 btn-outline-light rounded-pill text-decoration-none"
+              </Button>
+              <Button
+                onClick={() => packDetails(10)}
+                variant="outline-light"
+                className="m-0 p-1 border-0 rounded-pill"
               >
                 Classic Package - 10 Mbps
-              </Link>
-              <Link
-                to="/normal"
-                className="m-0 px-1 btn-outline-light rounded-pill text-decoration-none"
+              </Button>
+              <Button
+                onClick={() => packDetails(15)}
+                variant="outline-light"
+                className="m-0 p-1 border-0 rounded-pill"
               >
                 Classic Package - 15 Mbps
-              </Link>
-              <Link
-                to="/normal"
-                className="m-0 px-1 btn-outline-light rounded-pill text-decoration-none"
+              </Button>
+              <Button
+                onClick={() => packDetails(20)}
+                variant="outline-light"
+                className="m-0 p-1 border-0 rounded-pill"
               >
                 Jumbo Package - 20 Mbps
-              </Link>
+              </Button>
             </Nav>
             <Nav className="justify-content-center align-items-center mt-3">
               <h4 className="text-light fs-5">our FTP server</h4>
@@ -205,9 +190,11 @@ function Footer() {
           <FaChevronCircleUp className="fs-2 me-2 p-0 rounded-pill shadow" />
         </a>
       </Navbar>
-      <MyVerticallyCenteredModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
+      <CashModal modalShow={modalShow} setModalShow={setModalShow} />
+      <PackModal
+        pack={pack}
+        packModalShow={packModalShow}
+        setPackModalShow={setPackModalShow}
       />
     </>
   );
